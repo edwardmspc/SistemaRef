@@ -11,4 +11,4 @@ class CustomUserCreationForm(UserCreationForm):
 
 class CustomUserCreationInviterForm(CustomUserCreationForm):
 	
-	inviter = forms.CharField(initial='6666')
+	inviter = forms.CharField()

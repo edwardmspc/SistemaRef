@@ -58,14 +58,12 @@ class SignupView(View):
         if inviter is not None:
             if not request.POST.copy():
                 form = CustomUserCreationInviterForm()
-                #print request
-                return render({'inviter':inviter},'users/signup.html', {'form': form})
             else:
-                pass    
-                #form = CustomUserCreationInviterForm(testss)
+                form = CustomUserCreationInviterForm(request.POST)
         else:
             form = CustomUserCreationForm()
-        return render(request,'users/signup.html', {'form': form})
+            inviter = ""
+        return render(request,'users/signup.html', {'form': form,'inviter':inviter })
 
 
 class SigninView(View):

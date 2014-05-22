@@ -36,7 +36,8 @@
 
 				<div>
 					<label for="name" accesskey="U">Username:</label>
-						{{ form.username }}<mark class="validate"></mark>{{ form.username.errors }}
+						<input id = "id_inviter" name = "inviter" type = "text" value = "{{inviter}}">
+						<mark class="validate"></mark>{{ form.username.errors }}
 				</div>
 
 				<div>

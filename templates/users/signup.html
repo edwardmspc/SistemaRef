@@ -33,10 +33,11 @@
 		<form method="post" action="" id="signup">{% csrf_token %}
 
 			<fieldset>
-				{% if form.inviter %}
+				{% if inviter %}
 				<div>
-					<label for="name" accesskey="U">Referido:</label>
-				    {{ form.inviter }}<mark class="validate"></mark>{{ form.inviter.errors }}
+					<label for="inviter" accesskey="U">Inviter:</label>
+					<input id = "id_inviter" name = "inviter" type = "text" value = "{{inviter}}">
+					<mark class="validate"></mark>{{ form.inviter.errors }}
 				</div>
 				{% endif %}
 
