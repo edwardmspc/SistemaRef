@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block title %} JustoFor5Dollars | IndexProject{% endblock %}
+
+{% block content %} 
+<section id="titlebar">
+	<!-- Container -->
+	<div class="container">
+	
+		<div class="eight columns animated fadeInLeft" data-appear-top-offset="-100" data-animated="fadeInLeft">
+			<h2><i class="icon-briefcase"></i> Login</h2>
+		</div>
+		
+		<div class="eight columns animated fadeInRight" data-appear-top-offset="-100" data-animated="fadeInRight">
+			<nav id="breadcrumbs">
+				<ul>
+					<li>Estas aquí:</li>
+					<li><a href="{% url 'home' %}">Home</a></li>
+					<li>Login</li>
+				</ul>
+			</nav>
+		</div>
+
+	</div>
+	<!-- Container / End -->
+</section>
+
+<div class="container">
+
+	<!-- 1/3 -->
+	<div class="one-third column">
+		<div class="clearfix"></div>
+		<form method="post" action="{% url 'signin' %}" id="signin">{% csrf_token %}
+
+			<fieldset>
+
+				<div>
+					<label for="username" accesskey="U">Username:</label>
+						<input type="text" placeholder="Usuario" class="form-control" name="username" value="" id="username">
+				</div>
+
+				<div>
+					<label for="password" accesskey="E">Password:</label>
+					<input type="password" placeholder="Password" class="form-control" name="password" value="" id="password">
+				</div>
+
+			</fieldset>
+
+			<input type="submit" class="submit" id="submit" value="Iniciar sesion">
+			<div class="clearfix"></div>
+
+		</form>
+		
+	</div>
+
+	<!-- 2/3 -->
+	<div class="two-thirds column">
+		
+
+	
+		<h3 class="headline"><span class="text_headline">Service</span> Features</h3><span class="line" style="margin-bottom:45px;"></span>
+		<div class="clearfix"></div>
+	
+		<div class="four columns chart">
+			<div class="percentage-2 easyPieChart" data-percent="75" style="width: 155px; height: 155px; line-height: 155px;">
+				<span><i class="icon-lightbulb"></i></span>
+			<canvas width="155" height="155"></canvas></div>
+			<div class="label">
+				Advertising
+			</div>
+			<p>
+				Interdum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus musarchitecto dicta
+			</p>
+		</div>
+
+		<div class="four columns chart">
+			<div class="percentage-3 easyPieChart" data-percent="88" style="width: 155px; height: 155px; line-height: 155px;">
+				<span><i class="icon-code"></i></span>
+			<canvas width="155" height="155"></canvas></div>
+			<div class="label">
+				System Development
+			</div>
+			<p>
+				Interdum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus musarchitecto dicta
+			</p>
+		</div>
+
+
+</div>
+
+	</div>
+
+</div>
+
+{% endblock %}

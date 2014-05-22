@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>{% block title %}{% endblock %}</title>
+{% load static from staticfiles %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/colors/blue.css' %}">
+<link rel="stylesheet" href="{% static 'css/animate.css' %}" type="text/css" media="all" />
+
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="{% static 'scripts/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/jquery.themepunch.plugins.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/jquery.themepunch.revolution.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/jquery.themepunch.showbizpro.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/jquery.easing.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/jquery.tooltips.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/jquery.magnific-popup.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/jquery.superfish.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/jquery.twitter.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/jquery.flexslider.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/jquery.jpanelmenu.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/jquery.contact.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/jquery.isotope.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/custom.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/modernizr.custom.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/jquery.easy-pie-chart.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/modules.js' %}"></script>
+
+</head>
+<body class="op0" data-animated="fadeIn">
+
+<header id="header">
+
+<!-- Container -->
+<div class="container">
+
+	<!-- Logo / Mobile Menu -->
+	<div class="three columns">
+	
+		<div id="mobile-navigation">
+			<form method="GET" id="menu-search" action="#">
+				<input type="text" placeholder="Start Typing..." />
+			</form>
+			<a href="#menu" class="menu-trigger"><i class="icon-reorder"></i></a>
+			<span class="search-trigger"><i class="icon-search"></i></span>
+		</div>
+
+		<div id="logo">
+			<h1><a href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}"></a></h1>
+		</div>
+	</div>
+
+
+
+<div class="thirteen columns">
+
+	<nav id="navigation" class="menu">
+		<ul id="responsive">
+
+			<li><a href="{% url 'home' %}" id="current">Home</a></li>
+			<li><a href="#">Modelo de negocio</a></li>
+			<li><a href="#">Testimonios</a></li>
+			<li><a class="button color" href="{% url 'signup' %}">Registrarse</a></li>
+			<li><a class="button dark" href="{% url 'signin' %}">Login</a></li>
+			
+		</ul>
+	</nav>
+</div>
+
+</div>
+<!-- Container / End -->
+
+</header>
+<!-- Header / End -->
+
+<div id="content-wrapper">
+{% block content %}{% endblock %}
+</div>
+
+<!-- Footer Bottom / Start -->
+<div id="footer-bottom">
+
+	<!-- Container -->
+	<div class="container">
+
+	  <div class="eight columns">JustFor5Dollars © Copyright 2014. Todos los derechos reservados</div>
+		<div class="eight columns">
+			<ul class="social-icons-footer">
+				<li><a href="#" class="tooltip top" title="Twitter"><i class="icon-twitter"></i></a></li>
+				<li><a href="#" class="tooltip top" title="Facebook"><i class="icon-facebook"></i></a></li>
+				<li><a href="#" class="tooltip top" title="Dribbble"><i class="icon-dribbble"></i></a></li>
+				<li><a href="#" class="tooltip top" title="LinkedIn"><i class="icon-linkedin-rect"></i></a></li>
+				<li><a href="#" class="tooltip top" title="RSS"><i class="icon-rss"></i></a></li>
+			</ul>
+		</div>
+
+	</div>
+	<!-- Container / End -->
+
+</div>
+<!-- Footer Bottom / Start -->
+
+</body>
+
+</html>
